@@ -10,10 +10,10 @@ public class Testing {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		HtmlUnitDriver driver=new HtmlUnitDriver(BrowserVersion.FIREFOX_38);
-		driver.get("http://172.31.25.9:8080/qaenv/");
+		HtmlUnitDriver driver=new HtmlUnitDriver(BrowserVersion.CHROME);
+		driver.get("https://login.salesforce.com");
 		System.out.println(driver.getCurrentUrl());
-		String expmsg="Hello, World!";
+		String expmsg="Dashboard";
 		String actmsg=driver.findElement(By.xpath("html/body")).getText();
 		System.out.println("Expected Message : "+expmsg);
 		System.out.println("Actual Message   : "+actmsg);
